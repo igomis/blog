@@ -19,38 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59bde44f-dab6-46d4-a21c-7c56d29f63b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f8778ff4ac494f2086f89a52a9f74772ba4c8be" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15099ec686d9d572c5cfaa34229215bd816cc5c4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2ed23e1749f02eb8e561f0a531d07863e7cf9fb9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/3132c8d0c93e4f27578b5e39839067e47f3c07db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/34b657cb201830b180fd31e9b2cfef01b1580081" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/e/4e4f61b485e70e1929e7cd3a760eecda06f6aaf7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/618fc67bc6c0382c9c0ebb0e124942e38d11ad4e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b9a783d9b43fee50fd28f56dbd1856d2608f305" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/7605636e1f16e60db7996e93d8f75f1c78334847" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de963aaada5c6577b654cfbdcf083dc355b1fa2b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8bce8fdd4554029db880dad88100dded3c992ff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f15ec639960ec5320fa2b2c5c696dc28d62ba089" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inicio.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/plantilla.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/posts/ficha.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/posts/listado.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
+    <list default="true" id="59bde44f-dab6-46d4-a21c-7c56d29f63b1" name="Default Changelist" comment="v1.2">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/plantilla.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/plantilla.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/ficha.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/listado.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +45,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -188,8 +169,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/post" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -201,6 +183,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/resources/views/post" />
     </key>
   </component>
@@ -222,8 +205,16 @@
       <workItem from="1607342237123" duration="3440000" />
       <workItem from="1607686495873" duration="2611000" />
       <workItem from="1607723566113" duration="10000" />
-      <workItem from="1607943426941" duration="3192000" />
+      <workItem from="1607943426941" duration="3793000" />
     </task>
+    <task id="LOCAL-00001" summary="v1.2">
+      <created>1607948227967</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607948227967</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,12 +232,20 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.2" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="539" y="364" key="NewPhpFileDialog" timestamp="1607345176139">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="539" y="364" key="NewPhpFileDialog/0.23.1440.827@0.23.1440.827" timestamp="1607345176139" />
     <state x="539" y="365" key="NewPhpFileDialog/0.23.1440.830@0.23.1440.830" timestamp="1607343599643" />
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1607948232600">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1607948232600" />
     <state x="385" y="175" width="670" height="676" key="search.everywhere.popup" timestamp="1607944191643">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
