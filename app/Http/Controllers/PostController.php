@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use Carbon\Carbon;
 
 class PostController extends Controller
 {
@@ -13,7 +15,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        //
+        //return view('posts_listado');
+        //return view('posts.index');
+        $posts = Post::with('autor')->orderBy('titulo', 'ASC')->paginate(5);
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -23,7 +29,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        // return "Nuevo post";
+        //
+        //return 'Nuevo post';
         return redirect()->route('inicio');
     }
 
@@ -46,7 +53,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return view('posts.show', compact('id'));
+        //
+        $post = Post::findOrFail($id);
+        return view('posts.show', compact('post'));
     }
 
     /**
@@ -57,7 +66,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        // return "Edición del post $id";
+        //
+        //return 'Edicion de post '. $id;
         return redirect()->route('inicio');
     }
 
@@ -82,5 +92,28 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+        Post::findOrFail($id)->delete();
+        return redirect()->route('posts.index');
+    }
+
+    public function nuevoPrueba()
+    {
+        //
+        $x = rand();
+        $post = new Post();
+        $post->titulo = 'Titulo '. $x;
+        $post->contenido = 'Contenido '. $x;
+        $post->save();
+        return redirect()->route('posts.show', $post->id);
+    }
+
+    public function editarPrueba($id)
+    {
+        $x = rand();
+        $post = Post::findOrFail($id);
+        $post->titulo = 'Titulo '. $x;
+        $post->contenido = 'Contenido '. $x;
+        $post->save();
+        return redirect()->route('posts.show', $post->id);
     }
 }
