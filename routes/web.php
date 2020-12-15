@@ -17,7 +17,8 @@ Route::get('/', function () {
     return view('inicio');
 })->name('inicio');
 
-Route::resource('posts', 'PostController')->only(['index', 'show', 'create', 'edit']);
+// Rutas de prueba para generar y editar posts automáticamente
+Route::get('posts/nuevoPrueba', 'PostController@nuevoPrueba')->name('nuevoPrueba');
+Route::get('posts/editarPrueba/{id}', 'PostController@editarPrueba')->name('editarPrueba');
 
-
-
+Route::resource('posts', 'PostController');
