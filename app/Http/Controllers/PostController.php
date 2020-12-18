@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Http\Requests\PostRequest;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\User;
+use App\Models\Comentario;
 use Carbon\Carbon;
 
 class PostController extends Controller
@@ -16,7 +18,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
         //return view('posts_listado');
         //return view('posts.index');
         $posts = Post::with('autor')->orderBy('titulo', 'ASC')->paginate(5);
@@ -30,9 +31,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
         //return 'Nuevo post';
-        return redirect()->route('inicio');
+        //return redirect()->route('inicio');
+        return view('posts.create');
     }
 
     /**
@@ -41,9 +42,15 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        //
+        $post = new Post();
+        $post->titulo = $request->get('titulo');
+        $post->contenido = $request->get('contenido');
+        $post->autor()->associate(User::findOrFail(1));
+        $post->save();
+
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -54,7 +61,6 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
         $post = Post::findOrFail($id);
         return view('posts.show', compact('post'));
     }
@@ -67,9 +73,10 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
         //return 'Edicion de post '. $id;
-        return redirect()->route('inicio');
+        //return redirect()->route('inicio');
+        $post = Post::findOrFail($id);
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -79,9 +86,14 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $post->titulo = $request->get('titulo');
+        $post->contenido = $request->get('contenido');
+        $post->save();
+
+        return view('posts.show', compact('post'));
     }
 
     /**
@@ -92,7 +104,7 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Comentario::where('post_id', $id)->delete();
         Post::findOrFail($id)->delete();
         return redirect()->route('posts.index');
     }
@@ -104,7 +116,6 @@ class PostController extends Controller
         $post = new Post();
         $post->titulo = 'Titulo '. $x;
         $post->contenido = 'Contenido '. $x;
-        $post->autor_id = User::inRandomOrder()->first()->id;
         $post->save();
         return redirect()->route('posts.show', $post->id);
     }
@@ -115,8 +126,8 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $post->titulo = 'Titulo '. $x;
         $post->contenido = 'Contenido '. $x;
-        $post->autor_id = User::inRandomOrder()->first()->id;
         $post->save();
         return redirect()->route('posts.show', $post->id);
     }
 }
+

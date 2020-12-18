@@ -19,9 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59bde44f-dab6-46d4-a21c-7c56d29f63b1" name="Default Changelist" comment="v3.2">
+    <list default="true" id="59bde44f-dab6-46d4-a21c-7c56d29f63b1" name="Default Changelist" comment="v4.3">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/PostRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ComentarioFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_crear_tabla_usuarios.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_29_182223_crear_tabla_posts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_09_103008_nuevo_campo_autor_post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_09_152915_create_comentarios_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/ComentariosSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/PostsSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/UsuariosSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/pie.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/posts/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/plantilla.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/plantilla.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +59,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="v3.2" />
+        <entry key="$PROJECT_DIR$" value="v4.3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -166,7 +183,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/posts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -178,10 +195,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http" />
+      <recent name="$PROJECT_DIR$/resources/views/partials" />
       <recent name="$PROJECT_DIR$/resources/views/posts" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/app/Models" />
-      <recent name="$PROJECT_DIR$/resources/views/post" />
     </key>
   </component>
   <component name="RunManager">
@@ -225,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608039986279</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="v4.3">
+      <created>1608283954039</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608283954039</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +272,8 @@
     <MESSAGE value="v1.2" />
     <MESSAGE value="v2.2" />
     <MESSAGE value="v3.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v3.2" />
+    <MESSAGE value="v4.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="v4.3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608283820097">
@@ -260,10 +286,11 @@
     <state x="539" y="362" key="NewPhpFileDialog/0.23.1440.823@0.23.1440.823" timestamp="1607948759740" />
     <state x="539" y="364" key="NewPhpFileDialog/0.23.1440.827@0.23.1440.827" timestamp="1607345176139" />
     <state x="539" y="365" key="NewPhpFileDialog/0.23.1440.830@0.23.1440.830" timestamp="1607343599643" />
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1608039991516">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1608283960296">
+      <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1608039991516" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.23.1440.826@0.23.1440.826" timestamp="1608283960296" />
     <state x="531" y="285" key="git4idea.ui.GitTagDialog" timestamp="1607948822368">
       <screen x="0" y="23" width="1440" height="823" />
     </state>

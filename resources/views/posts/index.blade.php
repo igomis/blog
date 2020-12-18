@@ -17,11 +17,7 @@
                   </svg>
                 </button>
             </form>
-            <form action="{{ route('posts.update', $post) }}" method="POST" class="d-inline-block">
-                @method('UPDATE')
-                @csrf
-                <button class="btn btn-success">Editar</button>
-            </form>
+            <a href="{{ route('posts.edit', $post) }}" class="btn btn-success">Editar</a>
         </li>
         @empty
             <li>No hay posts</li>
