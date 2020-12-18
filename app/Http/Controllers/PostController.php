@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Carbon\Carbon;
@@ -103,6 +104,7 @@ class PostController extends Controller
         $post = new Post();
         $post->titulo = 'Titulo '. $x;
         $post->contenido = 'Contenido '. $x;
+        $post->autor_id = User::inRandomOrder()->first()->id;
         $post->save();
         return redirect()->route('posts.show', $post->id);
     }
@@ -113,6 +115,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $post->titulo = 'Titulo '. $x;
         $post->contenido = 'Contenido '. $x;
+        $post->autor_id = User::inRandomOrder()->first()->id;
         $post->save();
         return redirect()->route('posts.show', $post->id);
     }
