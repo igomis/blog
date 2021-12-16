@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
-use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Comentario;
-use Carbon\Carbon;
 
 class PostController extends Controller
 {
@@ -18,8 +16,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        //return view('posts_listado');
-        //return view('posts.index');
         $posts = Post::with('autor')->orderBy('titulo', 'ASC')->paginate(5);
         return view('posts.index', compact('posts'));
     }
@@ -31,8 +27,6 @@ class PostController extends Controller
      */
     public function create()
     {
-        //return 'Nuevo post';
-        //return redirect()->route('inicio');
         return view('posts.create');
     }
 
@@ -73,8 +67,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //return 'Edicion de post '. $id;
-        //return redirect()->route('inicio');
+
         $post = Post::findOrFail($id);
         return view('posts.edit', compact('post'));
     }
@@ -109,25 +102,6 @@ class PostController extends Controller
         return redirect()->route('posts.index');
     }
 
-    public function nuevoPrueba()
-    {
-        //
-        $x = rand();
-        $post = new Post();
-        $post->titulo = 'Titulo '. $x;
-        $post->contenido = 'Contenido '. $x;
-        $post->save();
-        return redirect()->route('posts.show', $post->id);
-    }
 
-    public function editarPrueba($id)
-    {
-        $x = rand();
-        $post = Post::findOrFail($id);
-        $post->titulo = 'Titulo '. $x;
-        $post->contenido = 'Contenido '. $x;
-        $post->save();
-        return redirect()->route('posts.show', $post->id);
-    }
 }
 

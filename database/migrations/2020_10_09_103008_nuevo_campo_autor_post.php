@@ -14,7 +14,7 @@ class NuevoCampoAutorPost extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->integer('autor_id');
+            $table->integer('user_id');
         });
     }
 
@@ -26,7 +26,7 @@ class NuevoCampoAutorPost extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('autor_id');
+            $table->dropColumn('user_id');
         });
     }
 }

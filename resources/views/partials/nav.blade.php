@@ -12,9 +12,18 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{-- route('posts_listado') --}}{{ route('posts.index') }}">Listado de posts</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('posts.create') }}">Nuevo post</a>
-            </li>
+            @if (Auth::user())
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('posts.create') }}">Nuevo post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('logout.get') }}">Logout</a>
+                </li>
+            @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                </li>
+            @endif
         </ul>
     </div>
 </nav>

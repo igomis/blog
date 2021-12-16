@@ -25,7 +25,7 @@ class ComentarioFactory extends Factory
     {
         return [
             'contenido' => $this->faker->paragraph(5),
-            'autor_id' => User::inRandomOrder()->first()->id
+            'user_id' => User::inRandomOrder()->first()->id
         ];
     }
 }

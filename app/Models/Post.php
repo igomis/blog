@@ -11,7 +11,7 @@ class Post extends Model
 
     public function autor()
     {
-        return $this->belongsTo('App\Models\User', 'autor_id', 'id');
+        return $this->belongsTo('App\Models\User', 'user_id', 'id');
     }
 
     public function comentarios()

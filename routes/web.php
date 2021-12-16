@@ -18,7 +18,13 @@ Route::get('/', function () {
 })->name('inicio');
 
 // Rutas de prueba para generar y editar posts automáticamente
-Route::get('posts/nuevoPrueba', 'PostController@nuevoPrueba')->name('nuevoPrueba');
-Route::get('posts/editarPrueba/{id}', 'PostController@editarPrueba')->name('editarPrueba');
 
-Route::resource('posts', 'PostController');
+Route::resource('posts', PostController::class)->only(['index']);
+Route::resource('posts', PostController::class)->middleware('auth')->only(['create','store']);
+Route::resource('posts', PostController::class)->except(['index','create','store'])->middleware(['auth','owner:Post']);
+
+
+
+Auth::routes();
+Route::get('logout',[\App\Http\Controllers\Auth\LoginController::class,'logout'])->name('logout.get');
+Route::post('login',[\App\Http\Controllers\LoginController::class,'login']);

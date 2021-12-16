@@ -11,11 +11,11 @@ class Comentario extends Model
 
     public function autor()
     {
-        return $this->belongsTo('App\Models\User', 'autor_id', 'id');
+        return $this->belongsTo('App\Models\User', 'user_id', 'id');
     }
 
     public function post()
     {
-        return $this->belongsTo('App\Models\Post', 'autor_id', 'id');
+        return $this->belongsTo('App\Models\Post', 'user_id', 'id');
     }
 }
